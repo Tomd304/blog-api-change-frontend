@@ -17,7 +17,6 @@ const Navbar = () => {
     >
       <h1>Create</h1>
       <h1>Update</h1>
-      <h1>Delete</h1>
     </div>
   );
 };
