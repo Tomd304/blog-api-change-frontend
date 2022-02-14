@@ -6,7 +6,7 @@ const Navbar = () => {
       className="navbar"
       style={{
         width: "100%",
-        height: 48,
+        height: 60,
         backgroundColor: "slategrey",
         display: "flex",
         justifyContent: "center",
@@ -15,8 +15,20 @@ const Navbar = () => {
         fontSize: 24,
       }}
     >
-      <h1>Create</h1>
-      <h1>Update</h1>
+      <div
+        style={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "space-around",
+        }}
+      >
+        <Link to="/create">
+          <h1>Create</h1>
+        </Link>
+        <Link to="/update">
+          <h1>Update</h1>
+        </Link>
+      </div>
     </div>
   );
 };

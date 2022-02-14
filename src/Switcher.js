@@ -6,8 +6,9 @@ const Switcher = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Create />} />
+        <Route path="/create" element={<Create />} />
         <Route path="/update" element={<Update />} />
+        <Route from="*" to="/create" />
       </Routes>
     </BrowserRouter>
   );
