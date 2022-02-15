@@ -1,9 +1,8 @@
 import stylesheet from "./index.css";
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 
-const Create = () => {
+const Create = (props) => {
   const [body, setBody] = useState({
     title: "",
     content: "",
@@ -16,10 +15,12 @@ const Create = () => {
       method: "post",
       mode: "cors",
       headers: {
+        "auth-token": props.token,
         "Content-Type": "application/json",
       },
       body: JSON.stringify(body),
     });
+    setBody({ ...body });
   };
 
   const onChange = (e) => {

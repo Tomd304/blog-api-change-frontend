@@ -1,9 +1,8 @@
 import stylesheet from "./index.css";
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 
-const Update = () => {
+const Update = (props) => {
   const [body, setBody] = useState({
     _id: "",
     title: "",
@@ -35,6 +34,7 @@ const Update = () => {
       method: "put",
       mode: "cors",
       headers: {
+        "auth-token": props.token,
         "Content-Type": "application/json",
       },
       body: JSON.stringify(body),
